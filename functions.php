@@ -8,13 +8,13 @@ function theme_name_scripts()
     wp_enqueue_style('css-main', get_stylesheet_uri(), array(), $version);
     wp_enqueue_style('css-fonts',  get_template_directory_uri() . '/assets/fonts/montserrat/stylesheet.css', array(), $version);
     wp_enqueue_style('css-font-awesome',  'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), $version);
-    wp_enqueue_style('css-custom',  get_template_directory_uri() . '/assets/css/custom.css', array(), $version);
+    wp_enqueue_style('css-custom-main',  get_template_directory_uri() . '/assets/css/main.css', array(), $version);
     wp_enqueue_style('css-animatecss',  get_template_directory_uri() . '/assets/libs/animatecss/animate.min.css', array(), $version);
     wp_enqueue_style('css-slick',  get_template_directory_uri() . '/assets/libs/slick/slick.css', array(), $version);
     wp_enqueue_style('css-lightbox',  'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css', array(), $version);
 
     // start scripts
-     wp_enqueue_script('js-m', get_template_directory_uri() . '/assets/js/tools.js', array(), $version, false);
+    wp_enqueue_script('js-m', get_template_directory_uri() . '/assets/js/tools.js', array(), $version, false);
     wp_enqueue_script('js-jquery', get_template_directory_uri() . '/assets/libs/jquery/jquery-3.6.0.min.js', array(), $version, true);
     wp_enqueue_script('js-custom', get_template_directory_uri() . '/assets/js/custom.js', array('js-jquery'), $version, true);
     wp_enqueue_script('js-wow', get_template_directory_uri() . '/assets/libs/wow/wow.min.js', array(), $version, true);
@@ -52,7 +52,7 @@ function create_portfolio_post_type()
                 'add_new' => __('Добавить новое портфолио'),
             ),
             'supports' => array('title', 'editor', 'thumbnail', 'tag'),
-            'rewrite' => array('slug' => 'portfolio'),
+            'rewrite' => array('slug' => 'archive_portfolio'),
             'menu_position'      => 4,
             'taxonomies' => array('post_tag')
         )
@@ -91,7 +91,7 @@ function create_reviews_post_type()
                 'add_new' => __('Добавить новый отзыв'),
             ),
             'supports' => array('title', 'editor', 'thumbnail'),
-            'rewrite' => array('slug' => 'reviews'),
+            'rewrite' => array('slug' => 'archive_reviews'),
             'menu_position'      => 6,
         )
     );
@@ -109,8 +109,8 @@ function create_blog_post_type()
                 'singular_name' => __('Блог'),
                 'add_new' => __('Добавить новый пост'),
             ),
-			'supports' => array('title', 'editor', 'thumbnail', 'tag'),
-            'rewrite' => array('slug' => 'blog'),
+            'supports' => array('title', 'editor', 'thumbnail', 'tag'),
+            'rewrite' => array('slug' => 'archive_blog'),
             'menu_position'      => 7,
         )
     );
@@ -579,4 +579,4 @@ class Kama_Breadcrumbs
 // end  навигационная цепочка (хлебные крошки)
 
 
-add_theme_support( 'title-tag' );
+add_theme_support('title-tag');

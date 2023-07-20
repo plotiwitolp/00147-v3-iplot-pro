@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="<?php bloginfo('language'); ?>">
 
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title><?php wp_title(''); ?></title>
-		<?php wp_head(); ?>
-		<link rel="shortcut icon" type="image/x-icon" href="https://iplot.pro/favicon.ico">
-	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC70CMG6JW"></script>
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><?php wp_title(''); ?></title>
+	<?php wp_head(); ?>
+	<link rel="shortcut icon" type="image/x-icon" href="https://iplot.pro/favicon.ico">
+</head>
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC70CMG6JW"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
 		gtag('config', 'G-WC70CMG6JW');
-	</script>
+	</script> -->
 
-	<body>
-		<header class="header">
-			<div class="container">
-				<div class="header__inner">
-					<div class="header__logo ">
-						<a href="/">IPlotPro</a>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__logo ">
+					<a href="<?php echo home_url(); ?>">IPlotPro</a>
+				</div>
+
+				<noindex>
+					<div class="workload">
+						<div class="workload_label">Моя текущая загруженность</div>
+						<div class="workload_loading">
+							<div class="workload_loading-line"></div>
+						</div>
 					</div>
-
-					<!--                 <div class="info">
+				</noindex>
+				<!--                 <div class="info">
 <dl class="info__item">
 <dt class="info__label">Статус:</dt>
 <?php if (get_field('info__mode', 6)) { ?>
@@ -48,20 +56,20 @@
 </dl>
 </div> -->
 
-					<div class="header__nav-wrapper">
-						<nav class="header__nav">
-							<?php wp_nav_menu([
-	'theme_location'  => 'primary'
-]); ?>
-						</nav>
-						<div class="header__nav-mob">
-							<div class="header__nav-mob__open nav-mob_active"></div>
-							<div class="header__nav-mob__close"></div>
-						</div>
+				<div class="header__nav-wrapper">
+					<nav class="header__nav">
+						<?php wp_nav_menu([
+							'theme_location'  => 'primary'
+						]); ?>
+					</nav>
+					<div class="header__nav-mob">
+						<div class="header__nav-mob__open nav-mob_active"></div>
+						<div class="header__nav-mob__close"></div>
 					</div>
-
 				</div>
-			</div>
-		</header>
 
-		<main>
+			</div>
+		</div>
+	</header>
+
+	<main>
