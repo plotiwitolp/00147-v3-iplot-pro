@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__logo ">
-					<a href="<?php echo home_url(); ?>">IPlotPro</a>
+					<a href="<?php echo home_url(); ?>" rel="nofollow">IPlotPro</a>
 				</div>
 
 				<!--noindex-->
