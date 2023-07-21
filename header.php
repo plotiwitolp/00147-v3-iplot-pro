@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language'); ?>">
+<html lang="ru">
 
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php wp_title(''); ?></title>
-	<?php wp_head(); ?>
 	<link rel="shortcut icon" type="image/x-icon" href="https://iplot.pro/favicon.ico">
+	<?php wp_head(); ?>
 </head>
 <!-- Google tag (gtag.js) -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC70CMG6JW"></script>
@@ -27,34 +26,14 @@
 					<a href="<?php echo home_url(); ?>">IPlotPro</a>
 				</div>
 
-				<noindex>
-					<div class="workload">
-						<div class="workload_label">Моя текущая загруженность</div>
-						<div class="workload_loading">
-							<div class="workload_loading-line"></div>
-						</div>
+				<!--noindex-->
+				<div class="workload">
+					<div class="workload_label">Моя текущая загруженность</div>
+					<div class="workload_loading">
+						<div class="workload_loading-line"></div>
 					</div>
-				</noindex>
-				<!--                 <div class="info">
-<dl class="info__item">
-<dt class="info__label">Статус:</dt>
-<?php if (get_field('info__mode', 6)) { ?>
-<dd class="info__mode info__mode_on">свободен</dd>
-<?php } else { ?>
-<dd class="info__mode info__mode_off">занят</dd>
-<?php } ?>
-</dl>
-<?php if (!get_field('info__mode', 6)) { ?>
-<dl class="info__item">
-<dt class="info__label">Освобожусь через:</dt>
-<dd class="info__mode"><?php the_field('will_be_free', 6) ?></dd>
-</dl>
-<?php } ?>
-<dl class="info__item">
-<dt class="info__label">График работы:</dt>
-<dd class="info__mode">24/7</dd>
-</dl>
-</div> -->
+				</div>
+				<!--/noindex-->
 
 				<div class="header__nav-wrapper">
 					<nav class="header__nav">

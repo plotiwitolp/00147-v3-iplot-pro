@@ -17,10 +17,10 @@
 				</div>
 				<div class="btns">
 					<div class="btns__order-site btn">
-						<a href="#feddbackform">Заказать сайт</a>
+						<a href="<?php echo home_url('/zakazat-sajt'); ?>">Заказать сайт</a>
 					</div>
 					<div class="btns__order-rework btn">
-						<a href="#feddbackform">Заказать доработку сайта</a>
+						<a href="<?php echo home_url('/dorabotka-sajta'); ?>">Заказать доработку сайта</a>
 					</div>
 				</div>
 			</div>
@@ -29,6 +29,8 @@
 </div>
 
 <!-- PORTFOLIO -->
+
+<!--noindex-->
 <div class="block-portfolio">
 	<div class="container">
 		<section>
@@ -93,11 +95,12 @@
 		</section>
 	</div>
 </div>
-
+<!--/noindex-->
 
 
 
 <!-- REVIEWS -->
+<!--noindex-->
 <div class="block-reviews">
 	<div class="container">
 		<section>
@@ -174,38 +177,40 @@
 		</section>
 	</div>
 </div>
+<!--/noindex-->
 
-<!-- Tariffs -->
-<!-- <div class="block-rates">
-<div class="container">
-<section>
-<div class="section__title">
-<h2>
-Тарифы
-</h2>
+<!-- SEO TEXT-->
+<div class="block-seotext" id="seotext">
+	<div class="container">
+		<section>
+			<div class="section__title">
+				<h2>
+					Заказать сайт дешево
+				</h2>
+			</div>
+			<div class="seotext-body">
+				<?php the_content(); ?>
+			</div>
+		</section>
+	</div>
 </div>
-<div class="rates">
-<div class="rates__item">Тариф 1</div>
-<div class="rates__item">Тариф 2</div>
-<div class="rates__item">Тариф 3</div>
-</div>
-</section>
-</div>
-</div> -->
 
 <!-- Tariffs -->
 <div class="block-rates">
 	<div class="container">
 		<section>
 			<div class="section__title">
-				<h2>Тарифы</h2>
+				<h2>Цены</h2>
 			</div>
 			<div class="rates">
 				<!-- Эконом -->
 				<div class="rates__item">
+					<!--noindex-->
 					<div class="rates-title">Эконом</div>
+					<!--/noindex-->
 					<div class="rates-description">
 						<p>Небольшие лендинги, визитки, сайты с количеством шаблонных страниц до 4. С уже имеющимся готовым макетом (желательно в Figma). Без какого-либо сложного функционала.</p>
+						<!--noindex-->
 						<ul>
 							<li>Консультация по макету и ТЗ</li>
 							<li>Валидная верстка</li>
@@ -215,20 +220,26 @@
 							<li>Установка на хостинг</li>
 							<li>Тех. поддержка и консультация в течении недели</li>
 						</ul>
+						<!--/noindex-->
 					</div>
 					<div class="rates-price">
 						<div class="rates-price__new">от 9 000<span>₽</span></div>
 						<div class="rates-price__old">от 12 000<span>₽</span></div>
 					</div>
 					<div class="rates-order">
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform">заказать</a></div>
+						<!--noindex-->
+						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+						<!--/noindex-->
 					</div>
 				</div>
 				<!-- Комфорт -->
 				<div class="rates__item">
+					<!--noindex-->
 					<div class="rates-title">Комфорт</div>
+					<!--/noindex-->
 					<div class="rates-description">
 						<p>Многостраничные сайты с количеством шаблонных страниц до 10. Небольшие интернет-магазины без сложного функционала. Корпоративные сайты или относительно сложные лендинги.</p>
+						<!--noindex-->
 						<ul>
 							<li>Консультация по макету и ТЗ</li>
 							<li>Валидная верстка</li>
@@ -239,20 +250,26 @@
 							<li>Установка на хостинг</li>
 							<li>Тех. поддержка и консультация в течении 2 недель</li>
 						</ul>
+						<!--/noindex-->
 					</div>
 					<div class="rates-price">
 						<div class="rates-price__new">от 15 000<span>₽</span></div>
 						<div class="rates-price__old">от 20 000<span>₽</span></div>
 					</div>
 					<div class="rates-order">
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform">заказать</a></div>
+						<!--noindex-->
+						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+						<!--/noindex-->
 					</div>
 				</div>
 				<!-- Премиум -->
 				<div class="rates__item">
+					<!--noindex-->
 					<div class="rates-title">Премиум</div>
+					<!--/noindex-->
 					<div class="rates-description">
 						<p>Многостраничные сайты с количеством шаблонных страниц до 20. Интернет-магазины с относительно сложным функционалом. Корпоративные сайты или относительно сложные лендинги.</p>
+						<!--noindex-->
 						<ul>
 							<li>Консультация по макету и ТЗ</li>
 							<li>Валидная верстка</li>
@@ -263,13 +280,16 @@
 							<li>Установка на хостинг</li>
 							<li>Тех. поддержка и консультация в течении месяца</li>
 						</ul>
+						<!--/noindex-->
 					</div>
 					<div class="rates-price">
 						<div class="rates-price__new">от 25 000<span>₽</span></div>
 						<div class="rates-price__old">от 30 000<span>₽</span></div>
 					</div>
 					<div class="rates-order">
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform">заказать</a></div>
+						<!--noindex-->
+						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+						<!--/noindex-->
 					</div>
 				</div>
 			</div>
@@ -278,24 +298,11 @@
 </div>
 
 
-<!-- SEO TEXT-->
-<div class="block-seotext" id="seotext">
-	<div class="container">
-		<section>
-			<div class="section__title">
-				<h2>
-					О себе
-				</h2>
-			</div>
-			<div class="seotext-body">
-				<?php the_content(); ?>
-			</div>
-		</section>
-	</div>
-</div>
+
 
 
 <!-- TECHNOLOGY -->
+<!--noindex-->
 <div class="block-technology">
 	<div class="container">
 		<section>
@@ -347,9 +354,11 @@
 		</section>
 	</div>
 </div>
+<!--/noindex-->
 
 
 <!-- FEEDBACK FORM -->
+<!--noindex-->
 <div class="block-feddbackform" id="feddbackform">
 	<div class="container">
 		<section>
@@ -362,6 +371,7 @@
 		</section>
 	</div>
 </div>
+<!--/noindex-->
 
 
 
