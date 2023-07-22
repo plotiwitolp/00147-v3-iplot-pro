@@ -19,46 +19,46 @@
         faAngleDown();
       }
     });
-    //     $('.portfolio-gallery').slick({
-    //       arrows: false,
-    //       dots: true,
-    //     });
-    $('.reviews-slider').slick({
-      arrows: false,
-      slidesToShow: 5,
-      slidesToScroll: 3,
-      initialSlide: 1,
-      dots: true,
-      centerMode: true,
-      focusOnSelect: true,
-      infinite: false,
-      responsive: [
-        {
-          breakpoint: 1980,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 3,
-            initialSlide: 2,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 1385,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            initialSlide: 2,
-            dots: true,
-          },
-        },
-        {
-          breakpoint: 980,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
+
+    // start reviews
+    // $('.reviews-slider').slick({
+    //   arrows: false,
+    //   slidesToShow: 5,
+    //   slidesToScroll: 3,
+    //   initialSlide: 1,
+    //   dots: true,
+    //   centerMode: true,
+    //   focusOnSelect: true,
+    //   infinite: false,
+    //   responsive: [
+    //     {
+    //       breakpoint: 1980,
+    //       settings: {
+    //         slidesToShow: 4,
+    //         slidesToScroll: 3,
+    //         initialSlide: 2,
+    //         dots: true,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 1385,
+    //       settings: {
+    //         slidesToShow: 3,
+    //         slidesToScroll: 3,
+    //         initialSlide: 2,
+    //         dots: true,
+    //       },
+    //     },
+    //     {
+    //       breakpoint: 980,
+    //       settings: {
+    //         slidesToShow: 1,
+    //       },
+    //     },
+    //   ],
+    // });
+    // end reviews
+
     // start functions
     function faAngleUp() {
       $('.fa-angle-up').addClass('collapse_active');
@@ -110,5 +110,34 @@
     // $('#menu-verhnee-menyu li:first-child a').prepend('<!--noindex-->');
     // $('#menu-verhnee-menyu li:first-child a').append('<!--/noindex-->');
     // end add seo
+
+    // start подгрузка отзывов
+    var page = 1;
+    var loading = false;
+    var originalButtonText = $('.reviews-more-btn a').text();
+
+    $('.reviews-more-btn a').on('click', function (e) {
+      e.preventDefault();
+      if (!loading) {
+        loading = true;
+        page++;
+        var data = {
+          action: 'load_more_reviews',
+          page: page,
+        };
+        var url = $('.reviews-more-btn').data('url');
+        $('.reviews-more-btn a').text('Загрузка...');
+        $.post(url, data, function (response) {
+          if (response !== 'end') {
+            $('.reviews-slider__inner').append(response);
+            $('.reviews-more-btn a').text(originalButtonText);
+          } else {
+            $('.reviews-more-btn').hide();
+          }
+          loading = false;
+        });
+      }
+    });
+    // end подгрузка отзывов
   });
 })(jQuery);

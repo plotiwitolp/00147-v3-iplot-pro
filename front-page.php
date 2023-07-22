@@ -87,8 +87,8 @@
 					?>
 				</div>
 				<div class="portfolio-more">
-					<div class="portfolio-more-btn btn btn_medium">
-						<a href="<?php echo home_url('/portfolio'); ?>">смотреть ещё</a>
+					<div class="portfolio-more-btn ">
+						<a class="btn btn_medium" href="<?php echo home_url('/portfolio'); ?>">смотреть ещё</a>
 					</div>
 				</div>
 			</div>
@@ -101,7 +101,7 @@
 
 <!-- REVIEWS -->
 <!--noindex-->
-<div class="block-reviews">
+<div id="reviews" class="block-reviews">
 	<div class="container">
 		<section>
 			<div class="section__title">
@@ -109,29 +109,29 @@
 					Отзывы
 				</h2>
 			</div>
-			<ul class="reviews-slider">
-				<?php
-				$args = array(
-					'post_type' => 'reviews',
-					'posts_per_page' => 30
-				);
-				$query = new WP_Query($args);
-				if ($query->have_posts()) {
-					while ($query->have_posts()) {
-						$query->the_post();
+			<div class="reviews-slider">
+				<div class="reviews-slider__inner">
+					<?php
+					$args = array(
+						'post_type' => 'reviews',
+						'posts_per_page' => 4
+					);
+					$query = new WP_Query($args);
 
-						$project_link = get_field('project_link');
-				?>
-						<li>
-							<blockquote>
-								<div class="reviews-slider-item">
-									<div class="reviews-slider-item-inner">
-										<h3><?php the_title() ?></h3>
 
-										<div class="reviews-slider-item__desc">
-											<?php the_field('callback_text') ?>
-										</div>
+					if ($query->have_posts()) {
+						while ($query->have_posts()) {
+							$query->the_post();
 
+							$project_link = get_field('project_link');
+					?>
+
+							<div class="reviews-slider-item">
+								<div class="reviews-slider-item-inner">
+
+									<h3><?php the_title() ?></h3>
+
+									<div class="reviews-slider-item-inner__body">
 										<div class="review-owner">
 											<div class="review-owner__top">
 												<cite><?php the_field('review_owner'); ?></cite>
@@ -144,36 +144,52 @@
 											<time datetime="<?php the_field('publication_date'); ?>"><?php the_field('publication_date'); ?></time>
 										</div>
 
-										<div class="reviews-slider-item-btns">
-											<div class="reviews-slider-item-btns__item">
-												<a href="<?php echo get_field('src_link') ?>" target="_blank" class="btn btn_min">
-													источник
-												</a>
+										<div class="reviews-slider-item__desc__wrap">
+
+
+											<div class="reviews-slider-item__desc">
+												<blockquote>
+													<?php the_field('callback_text') ?>
+												</blockquote>
 											</div>
 
-											<?php if ($project_link) { ?>
+											<div class="reviews-slider-item-btns">
 												<div class="reviews-slider-item-btns__item">
-													<a href="<?php echo $project_link->guid ?>" class="btn btn_min">
-														проект
+													<a href="<?php echo get_field('src_link') ?>" rel="nofollow" target="_blank" class="btn btn_min">
+														источник
 													</a>
 												</div>
-											<?php } ?>
 
-
+												<?php if ($project_link) { ?>
+													<div class="reviews-slider-item-btns__item">
+														<a href="<?php echo $project_link->guid ?>" rel="nofollow" class="btn btn_min">
+															проект
+														</a>
+													</div>
+												<?php } ?>
+											</div>
 										</div>
 
 									</div>
+
+
 								</div>
-							</blockquote>
-						</li>
-				<?php
+							</div>
+
+					<?php
+						}
+						wp_reset_postdata();
+					} else {
+						echo 'К сожалению, отзывов пока нет.';
 					}
-					wp_reset_postdata();
-				} else {
-					echo 'К сожалению, отзывов пока нет.';
-				}
-				?>
-			</ul>
+					?>
+				</div>
+			</div>
+			<div class="reviews-more">
+				<div class="reviews-more-btn" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+					<a class="btn btn_medium" href="#">показать ещё</a>
+				</div>
+			</div>
 		</section>
 	</div>
 </div>
@@ -183,11 +199,6 @@
 <div class="block-seotext" id="seotext">
 	<div class="container">
 		<section>
-			<div class="section__title">
-				<h2>
-					Заказать сайт дешево
-				</h2>
-			</div>
 			<div class="seotext-body">
 				<?php the_content(); ?>
 			</div>

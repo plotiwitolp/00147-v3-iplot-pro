@@ -580,3 +580,86 @@ class Kama_Breadcrumbs
 
 
 add_theme_support('title-tag');
+
+
+
+
+// start Обработчик AJAX запроса для подгрузки отзывов
+add_action('wp_ajax_load_more_reviews', 'load_more_reviews');
+add_action('wp_ajax_nopriv_load_more_reviews', 'load_more_reviews');
+
+function load_more_reviews()
+{
+    $page = $_POST['page'];
+
+    $args = array(
+        'post_type' => 'reviews',
+        'posts_per_page' => 4,
+        'paged' => $page,
+    );
+    $query = new WP_Query($args);
+    $total_posts = $query->found_posts;
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+?>
+            <div class="reviews-slider-item">
+                <div class="reviews-slider-item-inner">
+
+                    <h3><?php the_title() ?></h3>
+
+                    <div class="reviews-slider-item-inner__body">
+                        <div class="review-owner">
+                            <div class="review-owner__top">
+                                <cite><?php the_field('review_owner'); ?></cite>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <div class="reviews-slider-item__pic">
+                                        <?php the_post_thumbnail(); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <time datetime="<?php the_field('publication_date'); ?>"><?php the_field('publication_date'); ?></time>
+                        </div>
+
+                        <div class="reviews-slider-item__desc__wrap">
+
+
+                            <div class="reviews-slider-item__desc">
+                                <blockquote>
+                                    <?php the_field('callback_text') ?>
+                                </blockquote>
+                            </div>
+
+                            <div class="reviews-slider-item-btns">
+                                <div class="reviews-slider-item-btns__item">
+                                    <a href="<?php echo get_field('src_link') ?>" rel="nofollow" target="_blank" class="btn btn_min">
+                                        источник
+                                    </a>
+                                </div>
+
+                                <?php if ($project_link) { ?>
+                                    <div class="reviews-slider-item-btns__item">
+                                        <a href="<?php echo $project_link->guid ?>" rel="nofollow" class="btn btn_min">
+                                            проект
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+<?php
+        }
+        wp_reset_postdata();
+    } else {
+        echo 'end'; // Отправим "end" как индикатор, что больше отзывов нет
+    }
+
+    wp_die();
+}
+// end Обработчик AJAX запроса для подгрузки отзывов
