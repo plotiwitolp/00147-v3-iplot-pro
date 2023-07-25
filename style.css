@@ -221,9 +221,9 @@ body {
   list-style-type: disc;
 }
 @media (max-width: 980px) {
-  .rates {
+  /* .rates {
     flex-wrap: wrap;
-  }
+  } */
 }
 /* end rates */
 

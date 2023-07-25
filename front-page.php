@@ -213,94 +213,96 @@
 			<div class="section__title">
 				<h2>Цены</h2>
 			</div>
-			<div class="rates">
-				<!-- Эконом -->
-				<div class="rates__item">
-					<!--noindex-->
-					<div class="rates-title">Эконом</div>
-					<!--/noindex-->
-					<div class="rates-description">
-						<p>Небольшие лендинги, визитки, сайты с количеством шаблонных страниц до 4. С уже имеющимся готовым макетом (желательно в Figma). Без какого-либо сложного функционала.</p>
+			<div class="rates__wrapper">
+				<div class="rates">
+					<!-- Эконом -->
+					<div class="rates__item">
 						<!--noindex-->
-						<ul>
-							<li>Консультация по макету и ТЗ</li>
-							<li>Валидная верстка</li>
-							<li>Адаптация под популярные разрешения экранов</li>
-							<li>Посадка на CMS (WordPress)</li>
-							<li>Настройка административной панели под контент</li>
-							<li>Установка на хостинг</li>
-							<li>Тех. поддержка и консультация в течении недели</li>
-						</ul>
+						<div class="rates-title">Эконом</div>
 						<!--/noindex-->
+						<div class="rates-description">
+							<p>Небольшие лендинги, визитки, сайты с количеством шаблонных страниц до 4. С уже имеющимся готовым макетом (желательно в Figma). Без какого-либо сложного функционала.</p>
+							<!--noindex-->
+							<ul>
+								<li>Консультация по макету и ТЗ</li>
+								<li>Валидная верстка</li>
+								<li>Адаптация под популярные разрешения экранов</li>
+								<li>Посадка на CMS (WordPress)</li>
+								<li>Настройка административной панели под контент</li>
+								<li>Установка на хостинг</li>
+								<li>Тех. поддержка и консультация в течении недели</li>
+							</ul>
+							<!--/noindex-->
+						</div>
+						<div class="rates-price">
+							<div class="rates-price__new">от 9 000<span>₽</span></div>
+							<div class="rates-price__old">от 12 000<span>₽</span></div>
+						</div>
+						<div class="rates-order">
+							<!--noindex-->
+							<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+							<!--/noindex-->
+						</div>
 					</div>
-					<div class="rates-price">
-						<div class="rates-price__new">от 9 000<span>₽</span></div>
-						<div class="rates-price__old">от 12 000<span>₽</span></div>
-					</div>
-					<div class="rates-order">
+					<!-- Комфорт -->
+					<div class="rates__item">
 						<!--noindex-->
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+						<div class="rates-title">Комфорт</div>
 						<!--/noindex-->
+						<div class="rates-description">
+							<p>Многостраничные сайты с количеством шаблонных страниц до 10. Небольшие интернет-магазины без сложного функционала. Корпоративные сайты или относительно сложные лендинги.</p>
+							<!--noindex-->
+							<ul>
+								<li>Консультация по макету и ТЗ</li>
+								<li>Валидная верстка</li>
+								<li>Адаптация под популярные разрешения экранов</li>
+								<li>Посадка на CMS (WordPress)</li>
+								<li>Настройка административной панели под контент</li>
+								<li>Программирование функциональных частей</li>
+								<li>Установка на хостинг</li>
+								<li>Тех. поддержка и консультация в течении 2 недель</li>
+							</ul>
+							<!--/noindex-->
+						</div>
+						<div class="rates-price">
+							<div class="rates-price__new">от 15 000<span>₽</span></div>
+							<div class="rates-price__old">от 20 000<span>₽</span></div>
+						</div>
+						<div class="rates-order">
+							<!--noindex-->
+							<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+							<!--/noindex-->
+						</div>
 					</div>
-				</div>
-				<!-- Комфорт -->
-				<div class="rates__item">
-					<!--noindex-->
-					<div class="rates-title">Комфорт</div>
-					<!--/noindex-->
-					<div class="rates-description">
-						<p>Многостраничные сайты с количеством шаблонных страниц до 10. Небольшие интернет-магазины без сложного функционала. Корпоративные сайты или относительно сложные лендинги.</p>
+					<!-- Премиум -->
+					<div class="rates__item">
 						<!--noindex-->
-						<ul>
-							<li>Консультация по макету и ТЗ</li>
-							<li>Валидная верстка</li>
-							<li>Адаптация под популярные разрешения экранов</li>
-							<li>Посадка на CMS (WordPress)</li>
-							<li>Настройка административной панели под контент</li>
-							<li>Программирование функциональных частей</li>
-							<li>Установка на хостинг</li>
-							<li>Тех. поддержка и консультация в течении 2 недель</li>
-						</ul>
+						<div class="rates-title">Премиум</div>
 						<!--/noindex-->
-					</div>
-					<div class="rates-price">
-						<div class="rates-price__new">от 15 000<span>₽</span></div>
-						<div class="rates-price__old">от 20 000<span>₽</span></div>
-					</div>
-					<div class="rates-order">
-						<!--noindex-->
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
-						<!--/noindex-->
-					</div>
-				</div>
-				<!-- Премиум -->
-				<div class="rates__item">
-					<!--noindex-->
-					<div class="rates-title">Премиум</div>
-					<!--/noindex-->
-					<div class="rates-description">
-						<p>Многостраничные сайты с количеством шаблонных страниц до 20. Интернет-магазины с относительно сложным функционалом. Корпоративные сайты или относительно сложные лендинги.</p>
-						<!--noindex-->
-						<ul>
-							<li>Консультация по макету и ТЗ</li>
-							<li>Валидная верстка</li>
-							<li>Адаптация под популярные разрешения экранов</li>
-							<li>Посадка на CMS (WordPress)</li>
-							<li>Настройка административной панели под контент</li>
-							<li>Программирование функциональных частей</li>
-							<li>Установка на хостинг</li>
-							<li>Тех. поддержка и консультация в течении месяца</li>
-						</ul>
-						<!--/noindex-->
-					</div>
-					<div class="rates-price">
-						<div class="rates-price__new">от 25 000<span>₽</span></div>
-						<div class="rates-price__old">от 30 000<span>₽</span></div>
-					</div>
-					<div class="rates-order">
-						<!--noindex-->
-						<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
-						<!--/noindex-->
+						<div class="rates-description">
+							<p>Многостраничные сайты с количеством шаблонных страниц до 20. Интернет-магазины с относительно сложным функционалом. Корпоративные сайты или относительно сложные лендинги.</p>
+							<!--noindex-->
+							<ul>
+								<li>Консультация по макету и ТЗ</li>
+								<li>Валидная верстка</li>
+								<li>Адаптация под популярные разрешения экранов</li>
+								<li>Посадка на CMS (WordPress)</li>
+								<li>Настройка административной панели под контент</li>
+								<li>Программирование функциональных частей</li>
+								<li>Установка на хостинг</li>
+								<li>Тех. поддержка и консультация в течении месяца</li>
+							</ul>
+							<!--/noindex-->
+						</div>
+						<div class="rates-price">
+							<div class="rates-price__new">от 25 000<span>₽</span></div>
+							<div class="rates-price__old">от 30 000<span>₽</span></div>
+						</div>
+						<div class="rates-order">
+							<!--noindex-->
+							<div class="rates-btn btn btn_medium"><a href="#feddbackform" rel="nofollow">заказать</a></div>
+							<!--/noindex-->
+						</div>
 					</div>
 				</div>
 			</div>
@@ -384,6 +386,32 @@
 </div>
 <!--/noindex-->
 
+
+<!-- freelancesites -->
+<!--noindex-->
+<div class="block-freelancesites" id="freelancesites">
+	<div class="freelancesites">
+		<div class="freelancesites__item freelancesites__item_kwork">
+			<a href="https://kwork.ru/user/ivanplotnikovpro" rel="nofollow" target="_blank">Я на KWORK</a>
+		</div>
+		<div class="freelancesites__item freelancesites__item_weblancer">
+			<a href="https://www.weblancer.net/users/ivan_plotnikov/" rel="nofollow" target="_blank">Я на Weblancer</a>
+		</div>
+	</div>
+</div>
+<!--/noindex-->
+
+<!-- telegram -->
+<!--noindex-->
+<div class="block-telegram" id="telegram">
+	<div class="telegram">
+		<a href="https://web.telegram.org/k/#@iplotpro" rel="nofollow" target="_blank">
+			<i class="fa fa-telegram" aria-hidden="true"></i>
+			Написать
+		</a>
+	</div>
+</div>
+<!--/noindex-->
 
 
 <?php get_footer(); ?>
