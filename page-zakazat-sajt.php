@@ -24,7 +24,7 @@
                     <?php if (have_rows('kalkulyator')) { ?>
                         <?php while (have_rows('kalkulyator')) { ?>
                             <?php the_row(); ?>
-                            <div class="calculator-item item-1 answer">
+                            <div class="calculator-item">
                                 <div class="answer-label"><?php echo get_sub_field('vopros_1'); ?></div>
 
 
@@ -33,7 +33,7 @@
                                     <?php if (have_rows('otvety_1')) { ?>
                                         <?php while (have_rows('otvety_1')) { ?>
                                             <?php the_row(); ?>
-                                            <div class="answer answer-1">
+                                            <div class="answer">
                                                 <div class="answer-label"><?php echo get_sub_field('vopros_2'); ?></div>
                                                 <?php if (get_sub_field('cena')) { ?>
                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
@@ -45,7 +45,7 @@
                                                     <?php if (have_rows('otvety_2')) { ?>
                                                         <?php while (have_rows('otvety_2')) { ?>
                                                             <?php the_row(); ?>
-                                                            <div class="answer answer-1">
+                                                            <div class="answer">
                                                                 <div class="answer-label"><?php echo get_sub_field('vopros_3'); ?></div>
                                                                 <?php if (get_sub_field('cena')) { ?>
                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
@@ -57,7 +57,7 @@
                                                                     <?php if (have_rows('otvety_3')) { ?>
                                                                         <?php while (have_rows('otvety_3')) { ?>
                                                                             <?php the_row(); ?>
-                                                                            <div class="answer answer-1">
+                                                                            <div class="answer">
                                                                                 <div class="answer-label"><?php echo get_sub_field('vopros_4'); ?></div>
                                                                                 <?php if (get_sub_field('cena')) { ?>
                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
@@ -69,7 +69,7 @@
                                                                                     <?php if (have_rows('otvety_4')) { ?>
                                                                                         <?php while (have_rows('otvety_4')) { ?>
                                                                                             <?php the_row(); ?>
-                                                                                            <div class="answer answer-1">
+                                                                                            <div class="answer">
                                                                                                 <div class="answer-label"><?php echo get_sub_field('vopros_5'); ?></div>
                                                                                                 <?php if (get_sub_field('cena')) { ?>
                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
@@ -81,7 +81,7 @@
                                                                                                     <?php if (have_rows('otvety_5')) { ?>
                                                                                                         <?php while (have_rows('otvety_5')) { ?>
                                                                                                             <?php the_row(); ?>
-                                                                                                            <div class="answer answer-1">
+                                                                                                            <div class="answer">
                                                                                                                 <div class="answer-label"><?php echo get_sub_field('vopros_6'); ?></div>
                                                                                                                 <?php if (get_sub_field('cena')) { ?>
                                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
