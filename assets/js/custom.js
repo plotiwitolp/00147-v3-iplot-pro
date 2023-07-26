@@ -139,5 +139,9 @@
       }
     });
     // end подгрузка отзывов
+
+    // start calculator
+    console.log($('calculator'));
+    // end calculator
   });
 })(jQuery);

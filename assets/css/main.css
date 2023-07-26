@@ -1401,6 +1401,12 @@ main {
     left: 130%;
   }
 }
+.answer {
+  padding: 8px 5px 8px 25px;
+  border: 1px solid #6d6d6d;
+  margin: 7px 0;
+}
+
 @media (hover: hover) {
   .header__nav ul li:hover,
   .section__title a:hover,
