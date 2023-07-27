@@ -142,6 +142,11 @@
 
     // start calculator
     console.log($('calculator'));
+
+    $('.answers-lvl-2 .answer-wrapper').on('click', function () {
+      console.log(this);
+      $(this).parent('.answer').children('.answers').slideDown();
+    });
     // end calculator
   });
 })(jQuery);

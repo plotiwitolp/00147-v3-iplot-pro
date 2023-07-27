@@ -7,7 +7,7 @@
             <!--noindex-->
             <div class="page_header">
                 <section>
-                    <?php the_content(); ?>
+                    <?php the_field('verhnee_opisanie_stranicy'); ?>
                 </section>
             </div>
             <!--/noindex-->
@@ -15,18 +15,18 @@
 
             <!-- START CALC -->
             <!--noindex-->
-            <h2>Калькулятор</h2>
-            <div class="calculator">
-
-
+            <div class="calculator" id="calculator-order">
+                <h2>Пройдите опрос и узнайте примерную стоимость вашего будущего сайта</h2>
                 <!-- START LEVEL 1 -->
                 <div class="calculator__inner answers-lvl-1">
                     <?php if (have_rows('kalkulyator')) { ?>
                         <?php while (have_rows('kalkulyator')) { ?>
                             <?php the_row(); ?>
                             <div class="calculator-item">
-                                <div class="answer-label"><?php echo get_sub_field('vopros_1'); ?></div>
-
+                                <div class="answer-wrapper">
+                                    <div class="answer-label"><?php echo get_sub_field('vopros_1'); ?></div>
+                                    <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
+                                </div>
 
                                 <!-- START LEVEL 2 -->
                                 <div class="answers answers-lvl-2">
@@ -34,11 +34,10 @@
                                         <?php while (have_rows('otvety_1')) { ?>
                                             <?php the_row(); ?>
                                             <div class="answer">
-                                                <div class="answer-label"><?php echo get_sub_field('vopros_2'); ?></div>
-                                                <?php if (get_sub_field('cena')) { ?>
+                                                <div class="answer-wrapper">
+                                                    <div class="answer-label"><?php echo get_sub_field('vopros_2'); ?></div>
                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
-                                                <?php } ?>
-
+                                                </div>
 
                                                 <!-- START LEVEL 3 -->
                                                 <div class="answers answers-lvl-3">
@@ -46,10 +45,10 @@
                                                         <?php while (have_rows('otvety_2')) { ?>
                                                             <?php the_row(); ?>
                                                             <div class="answer">
-                                                                <div class="answer-label"><?php echo get_sub_field('vopros_3'); ?></div>
-                                                                <?php if (get_sub_field('cena')) { ?>
+                                                                <div class="answer-wrapper">
+                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_3'); ?></div>
                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
-                                                                <?php } ?>
+                                                                </div>
 
 
                                                                 <!-- START LEVEL 4 -->
@@ -58,10 +57,10 @@
                                                                         <?php while (have_rows('otvety_3')) { ?>
                                                                             <?php the_row(); ?>
                                                                             <div class="answer">
-                                                                                <div class="answer-label"><?php echo get_sub_field('vopros_4'); ?></div>
-                                                                                <?php if (get_sub_field('cena')) { ?>
+                                                                                <div class="answer-wrapper">
+                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_4'); ?></div>
                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
-                                                                                <?php } ?>
+                                                                                </div>
 
 
                                                                                 <!-- START LEVEL 5 -->
@@ -70,10 +69,10 @@
                                                                                         <?php while (have_rows('otvety_4')) { ?>
                                                                                             <?php the_row(); ?>
                                                                                             <div class="answer">
-                                                                                                <div class="answer-label"><?php echo get_sub_field('vopros_5'); ?></div>
-                                                                                                <?php if (get_sub_field('cena')) { ?>
+                                                                                                <div class="answer-wrapper">
+                                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_5'); ?></div>
                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
-                                                                                                <?php } ?>
+                                                                                                </div>
 
 
                                                                                                 <!-- START LEVEL 6 -->
@@ -82,12 +81,10 @@
                                                                                                         <?php while (have_rows('otvety_5')) { ?>
                                                                                                             <?php the_row(); ?>
                                                                                                             <div class="answer">
-                                                                                                                <div class="answer-label"><?php echo get_sub_field('vopros_6'); ?></div>
-                                                                                                                <?php if (get_sub_field('cena')) { ?>
+                                                                                                                <div class="answer-wrapper">
+                                                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_6'); ?></div>
                                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
-                                                                                                                <?php } ?>
-
-
+                                                                                                                </div>
                                                                                                             </div>
                                                                                                         <?php } ?>
                                                                                                     <?php } ?>

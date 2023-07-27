@@ -1401,14 +1401,98 @@ main {
     left: 130%;
   }
 }
+.page p a {
+  text-decoration: underline;
+  color: #6ce7f9;
+}
+
 .answer {
-  padding: 8px 5px 8px 25px;
-  border: 1px solid #6d6d6d;
+  padding: 0 5px 0 25px;
   margin: 7px 0;
+  background-color: rgba(59, 72, 129, 0.2);
+  border-radius: 10px;
+}
+
+.calculator {
+  margin: 35px 0 0;
 }
 
 .calculator-item {
   margin: 35px 0 0 0;
+}
+
+.answers-lvl-1 > .calculator-item > .answer-wrapper > .answer-label {
+  font-size: 23px;
+  line-height: 32px;
+}
+
+.answers-lvl-2 > .answer > .answer-wrapper > .answer-label {
+  font-size: 21px;
+  line-height: 29px;
+}
+
+.answers-lvl-3 > .answer > .answer-wrapper > .answer-label {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.answers-lvl-4 > .answer > .answer-wrapper > .answer-label {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.answers-lvl-5 > .answer > .answer-wrapper > .answer-label {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.answers-lvl-6 > .answer > .answer-wrapper > .answer-label {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.answer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 7px 15px;
+  background-color: rgba(88, 104, 163, 0.7019607843);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.answers-lvl-1 > .calculator-item > .answer-wrapper {
+  background-color: #161b31;
+}
+
+.answers-lvl-2 > .answer > .answer-wrapper {
+  background-color: #252d52;
+}
+
+.answers-lvl-3 > .answer > .answer-wrapper {
+  background-color: #333e6e;
+}
+
+.answers-lvl-4 > .answer > .answer-wrapper {
+  background-color: #414f8d;
+}
+
+.answers-lvl-5 > .answer > .answer-wrapper {
+  background-color: #4b5ba3;
+}
+
+.answers-lvl-6 > .answer > .answer-wrapper {
+  background-color: #586bc0;
+}
+
+.answers-lvl-2 .answers {
+  display: none;
 }
 
 @media (hover: hover) {
