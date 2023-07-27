@@ -1491,6 +1491,14 @@ main {
   background-color: #586bc0;
 }
 
+.answer-price {
+  margin-left: auto;
+}
+
+.answer-wrapper input {
+  width: auto;
+}
+
 .answers-lvl-2 .answers {
   display: none;
 }

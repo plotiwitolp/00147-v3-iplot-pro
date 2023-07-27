@@ -141,11 +141,14 @@
     // end подгрузка отзывов
 
     // start calculator
-    console.log($('calculator'));
 
-    $('.answers-lvl-2 .answer-wrapper').on('click', function () {
-      console.log(this);
+    $('.answer-wrapper').on('click', function () {
+      $(this).find('input').prop('checked', true);
+      $(this).children('.answer-label').children('input[type=radio]').closest('.answer').siblings('.answer').children('.answers').slideUp();
       $(this).parent('.answer').children('.answers').slideDown();
+      // if ($(this).children('input[type=radio]').closest('.answer').children('.answers').children('input').attr('type') == 'checkbox') {
+      //   $(this).parent('.answer').children('.answers').slideDown();
+      // }
     });
     // end calculator
   });

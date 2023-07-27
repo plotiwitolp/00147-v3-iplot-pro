@@ -23,6 +23,7 @@
                         <?php while (have_rows('kalkulyator')) { ?>
                             <?php the_row(); ?>
                             <div class="calculator-item">
+
                                 <div class="answer-wrapper">
                                     <div class="answer-label"><?php echo get_sub_field('vopros_1'); ?></div>
                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
@@ -34,10 +35,17 @@
                                         <?php while (have_rows('otvety_1')) { ?>
                                             <?php the_row(); ?>
                                             <div class="answer">
+
+
                                                 <div class="answer-wrapper">
-                                                    <div class="answer-label"><?php echo get_sub_field('vopros_2'); ?></div>
+                                                    <div class="answer-label">
+                                                        <input type="<?php echo get_sub_field('chekboksdaredionet') ? 'checkbox' : 'radio'; ?>" name="<?php echo get_sub_field('imya_chekboksa_ili_redio'); ?>">
+                                                        <?php echo get_sub_field('vopros_2'); ?>
+                                                    </div>
                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
                                                 </div>
+
+
 
                                                 <!-- START LEVEL 3 -->
                                                 <div class="answers answers-lvl-3">
@@ -45,8 +53,13 @@
                                                         <?php while (have_rows('otvety_2')) { ?>
                                                             <?php the_row(); ?>
                                                             <div class="answer">
+
+
                                                                 <div class="answer-wrapper">
-                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_3'); ?></div>
+                                                                    <div class="answer-label">
+                                                                        <input type="<?php echo get_sub_field('chekboksdaredionet') ? 'checkbox' : 'radio'; ?>" name="<?php echo get_sub_field('imya_chekboksa_ili_redio'); ?>">
+                                                                        <?php echo get_sub_field('vopros_3'); ?>
+                                                                    </div>
                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
                                                                 </div>
 
@@ -57,8 +70,13 @@
                                                                         <?php while (have_rows('otvety_3')) { ?>
                                                                             <?php the_row(); ?>
                                                                             <div class="answer">
+
+
                                                                                 <div class="answer-wrapper">
-                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_4'); ?></div>
+                                                                                    <div class="answer-label">
+                                                                                        <input type="<?php echo get_sub_field('chekboksdaredionet') ? 'checkbox' : 'radio'; ?>" name="<?php echo get_sub_field('imya_chekboksa_ili_redio'); ?>">
+                                                                                        <?php echo get_sub_field('vopros_4'); ?>
+                                                                                    </div>
                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
                                                                                 </div>
 
@@ -69,8 +87,13 @@
                                                                                         <?php while (have_rows('otvety_4')) { ?>
                                                                                             <?php the_row(); ?>
                                                                                             <div class="answer">
+
+
                                                                                                 <div class="answer-wrapper">
-                                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_5'); ?></div>
+                                                                                                    <div class="answer-label">
+                                                                                                        <input type="<?php echo get_sub_field('chekboksdaredionet') ? 'checkbox' : 'radio'; ?>" name="<?php echo get_sub_field('imya_chekboksa_ili_redio'); ?>">
+                                                                                                        <?php echo get_sub_field('vopros_5'); ?>
+                                                                                                    </div>
                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
                                                                                                 </div>
 
@@ -81,10 +104,17 @@
                                                                                                         <?php while (have_rows('otvety_5')) { ?>
                                                                                                             <?php the_row(); ?>
                                                                                                             <div class="answer">
+
+
                                                                                                                 <div class="answer-wrapper">
-                                                                                                                    <div class="answer-label"><?php echo get_sub_field('vopros_6'); ?></div>
+                                                                                                                    <div class="answer-label">
+                                                                                                                        <input type="<?php echo get_sub_field('chekboksdaredionet') ? 'checkbox' : 'radio'; ?>" name="<?php echo get_sub_field('imya_chekboksa_ili_redio'); ?>">
+                                                                                                                        <?php echo get_sub_field('vopros_6'); ?>
+                                                                                                                    </div>
                                                                                                                     <div class="answer-price"><?php echo get_sub_field('cena'); ?></div>
                                                                                                                 </div>
+
+
                                                                                                             </div>
                                                                                                         <?php } ?>
                                                                                                     <?php } ?>
