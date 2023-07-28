@@ -1066,7 +1066,6 @@ main {
 // start calc
 .answer {
   padding: 0 5px 0 25px;
-  // border: 1px solid #6d6d6d;
   margin: 7px 0;
   background-color: #3b488133;
   border-radius: 10px;
@@ -1075,7 +1074,8 @@ main {
   margin: 35px 0 0;
 }
 .calculator-item {
-  margin: 35px 0 0 0;
+  margin: 15px 0 0 0;
+  padding: 10px 7px;
 }
 .answers-lvl-1 > .calculator-item > .answer-wrapper > .answer-label {
   font-size: 23px;
@@ -1111,22 +1111,19 @@ main {
   border-radius: 10px;
 }
 .answers-lvl-1 > .calculator-item > .answer-wrapper {
-  background-color: #161b31;
-}
-.answers-lvl-2 > .answer > .answer-wrapper {
-  background-color: #252d52;
+  background-color: #5b6aa9;
 }
 .answers-lvl-3 > .answer > .answer-wrapper {
-  background-color: #333e6e;
+  background-color: #4b5ba3;
 }
 .answers-lvl-4 > .answer > .answer-wrapper {
   background-color: #414f8d;
 }
 .answers-lvl-5 > .answer > .answer-wrapper {
-  background-color: #4b5ba3;
+  background-color: #333e6e;
 }
 .answers-lvl-6 > .answer > .answer-wrapper {
-  background-color: #586bc0;
+  background-color: #1e2647;
 }
 .answer-price {
   margin-left: auto;
@@ -1136,6 +1133,39 @@ main {
 }
 
 .answers-lvl-2 .answers {
+  display: none;
+}
+
+.calculator-order-btn {
+  margin: 20px auto;
+  max-width: 185px;
+  text-align: center;
+  background-color: #6ce7f9;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.calculator-order-result {
+  text-align: center;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 500;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 25px;
+  border: 1px solid #4b588d;
+  border-radius: 10px;
+}
+.calculator-order-result__price {
+  display: block;
+  color: #6ce7f9;
+  font-weight: 700;
+  font-size: 32px;
+}
+.answer-price {
   display: none;
 }
 // end calc

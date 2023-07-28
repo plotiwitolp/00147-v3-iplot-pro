@@ -143,12 +143,72 @@
     // start calculator
 
     $('.answer-wrapper').on('click', function () {
-      $(this).find('input').prop('checked', true);
+      $(this).find('input[type=radio]').prop('checked', true);
+
       $(this).children('.answer-label').children('input[type=radio]').closest('.answer').siblings('.answer').children('.answers').slideUp();
       $(this).parent('.answer').children('.answers').slideDown();
-      // if ($(this).children('input[type=radio]').closest('.answer').children('.answers').children('input').attr('type') == 'checkbox') {
-      //   $(this).parent('.answer').children('.answers').slideDown();
-      // }
+
+      if (!$(this).find('input[type=checkbox]').prop('checked')) {
+        $(this).find('input[type=checkbox]').prop('checked', true);
+        $(this).siblings('.answers').children('.answer').slideDown();
+      } else {
+        $(this).find('input[type=checkbox]').prop('checked', false);
+        $(this).siblings('.answers').children('.answer').slideUp();
+      }
+
+      if ($(this).siblings('.answers').children('.answer').length == 1) {
+        $(this).siblings('.answers').children('.answer').children('.answer-wrapper').find('input').prop('checked', true);
+        $(this).siblings('.answers').children('.answer').children('.answer-wrapper').siblings('.answers').slideDown();
+        $(this).siblings('.answers').children('.answer').children('.answer-wrapper').siblings('.answers').children('.answer').slideDown();
+      }
+
+      if (!$(this).find('input').prop('checked')) {
+        console.log('test');
+        $(this).siblings('.answers').find('input').prop('checked', false);
+        $(this).siblings('.answers').find('.answers').slideUp();
+      }
+
+      dataCollection();
+    });
+
+    function dataCollection() {
+      let answerPricesArray = [];
+      let visibleAnswers = [];
+      $('.calculator__inner .answer').each(function () {
+        if ($(this).is(':visible') && $(this).children('.answer-wrapper').find('input').prop('checked') && $(this).parents('.answer').is(':visible')) {
+          visibleAnswers.push($(this));
+        }
+      });
+      visibleAnswers.forEach(function (element) {
+        var answerPriceText = element.children('.answer-wrapper').find('.answer-price').text();
+        answerPricesArray.push(answerPriceText);
+      });
+
+      return calc(answerPricesArray);
+    }
+
+    function calc(arr) {
+      var sum = 0;
+      arr.forEach(function (text) {
+        var number = parseFloat(text); // Используйте parseInt(), если числа целочисленные
+        if (!isNaN(number)) {
+          sum += number;
+        }
+      });
+      return sum;
+    }
+
+    $('.calculator-order-btn').on('click', function () {
+      const result = dataCollection();
+      if (result > 0) {
+        const resultElement = $('.calculator-order-result');
+        resultElement.html('Примерная стоимость вашего будущего сайта по указанным критериям составляет:  <span class="calculator-order-result__price">' + result + '₽</span>');
+        resultElement.show();
+      } else {
+        const resultElement = $('.calculator-order-result');
+        resultElement.text('Заполните, пожалуйста, все пункты опроса');
+        resultElement.show();
+      }
     });
     // end calculator
   });

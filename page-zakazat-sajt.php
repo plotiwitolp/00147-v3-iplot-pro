@@ -22,7 +22,7 @@
                     <?php if (have_rows('kalkulyator')) { ?>
                         <?php while (have_rows('kalkulyator')) { ?>
                             <?php the_row(); ?>
-                            <div class="calculator-item">
+                            <div class="calculator-item answer">
 
                                 <div class="answer-wrapper">
                                     <div class="answer-label"><?php echo get_sub_field('vopros_1'); ?></div>
@@ -155,6 +155,10 @@
                     <?php } ?>
                 </div>
                 <!-- END LEVEL 1 -->
+
+                <div class="calculator-order-btn">РАССЧИТАТЬ</div>
+                <div class="calculator-order-result" style="display: none;"></div>
+
 
             </div>
             <!--/noindex-->
