@@ -210,7 +210,7 @@
 <div class="block-rates">
 	<div class="container">
 		<section>
-			<div class="section__title">
+			<div class="section__title" id="prices">
 				<h2>Цены</h2>
 			</div>
 			<div class="rates__wrapper">
@@ -222,7 +222,7 @@
 						<!--/noindex-->
 						<div class="rates-description">
 							<p>Небольшие лендинги, визитки, сайты с количеством шаблонных страниц до 4. С уже имеющимся готовым макетом (желательно в Figma). Без какого-либо сложного функционала.</p>
-							<!--noindex-->
+
 							<ul>
 								<li>Консультация по макету и ТЗ</li>
 								<li>Валидная верстка</li>
@@ -232,7 +232,7 @@
 								<li>Установка на хостинг</li>
 								<li>Тех. поддержка и консультация в течении недели</li>
 							</ul>
-							<!--/noindex-->
+
 						</div>
 						<div class="rates-price">
 							<div class="rates-price__new">от 9 000<span>₽</span></div>

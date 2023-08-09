@@ -1537,6 +1537,20 @@ main {
   display: none;
 }
 
+@media (max-width: 600px) {
+  .answers-lvl-1 > .calculator-item > .answer-wrapper > .answer-label {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .answers-lvl-2 > .answer > .answer-wrapper > .answer-label {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .answers-lvl-3 > .answer > .answer-wrapper > .answer-label {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
 @media (hover: hover) {
   .header__nav ul li:hover,
   .section__title a:hover,
@@ -1887,8 +1901,10 @@ main {
     bottom: 7px;
   }
   .btn {
-    padding: 3px 11px 2px;
+    padding: 7px 8px 8px;
     font-size: 14px;
+    line-height: 18px;
+    text-align: center;
   }
   .header__nav-wrapper {
     min-width: 32px;
@@ -2112,10 +2128,9 @@ main {
   .archive h1,
   .page__body h1,
   .contacts h1 {
-    font-size: 48px;
-    line-height: 1.05em;
-    margin: 5px 0 -76px;
-    bottom: 42px;
+    font-size: 36px;
+    line-height: 0.75em;
+    margin: -35px 0 -5px;
   }
 }
 /* new custom tyles */
@@ -2192,4 +2207,14 @@ main {
   border: 1px solid #5e5e5e;
   padding: 4px 10px;
   border-radius: 4px;
+}
+
+.seotext-body ul {
+  padding-left: 35px;
+}
+
+.seotext-body ul li {
+  list-style-type: disc;
+  margin-bottom: 12px;
+  margin-top: 7px;
 }
