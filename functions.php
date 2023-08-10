@@ -177,9 +177,7 @@ function kama_breadcrumbs($sep = ' » ', $l10n = array(), $args = array())
 
 class Kama_Breadcrumbs
 {
-
     public $arg;
-
     // Локализация
     static $l10n = [
         'home'       => 'Главная',

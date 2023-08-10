@@ -2200,7 +2200,7 @@ main {
 }
 
 .pagination {
-  margin: 0 auto;
+  margin: 0 auto 75px;
 }
 
 .pagination .page-numbers {
@@ -2217,4 +2217,14 @@ main {
   list-style-type: disc;
   margin-bottom: 12px;
   margin-top: 7px;
+}
+
+.page_header p {
+  font-size: 22px;
+  line-height: 37px;
+}
+
+h4 {
+  margin: 24px 0 7px;
+  font-weight: 600;
 }

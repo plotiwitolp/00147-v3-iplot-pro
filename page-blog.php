@@ -5,6 +5,7 @@
 
         <div class="archive">
 
+            <!--noindex-->
             <section>
                 <div class="archive__inner">
                     <div class="archive-list">
@@ -14,13 +15,10 @@
                             'posts_per_page' => 4,
                             'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
                         );
-
                         $portfolio_query = new WP_Query($args);
-
                         if ($portfolio_query->have_posts()) :
                             while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
                         ?>
-
                                 <div class="archive-list__item">
                                     <a href="<?php the_permalink() ?>">
                                         <div class="archive-list__item-inner">
@@ -54,6 +52,7 @@
                     </div>
                 </div>
             </section>
+            <!--/noindex-->
 
             <section>
                 <?php the_content(); ?>

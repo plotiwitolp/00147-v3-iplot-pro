@@ -11,7 +11,7 @@
     });
     // end fixed menu
 
-    //start
+    // start
     $('.collapse').on('click', function () {
       if ($('.header__inner').hasClass('header__inner_hide')) {
         faAngleUp();
@@ -19,45 +19,7 @@
         faAngleDown();
       }
     });
-
-    // start reviews
-    // $('.reviews-slider').slick({
-    //   arrows: false,
-    //   slidesToShow: 5,
-    //   slidesToScroll: 3,
-    //   initialSlide: 1,
-    //   dots: true,
-    //   centerMode: true,
-    //   focusOnSelect: true,
-    //   infinite: false,
-    //   responsive: [
-    //     {
-    //       breakpoint: 1980,
-    //       settings: {
-    //         slidesToShow: 4,
-    //         slidesToScroll: 3,
-    //         initialSlide: 2,
-    //         dots: true,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 1385,
-    //       settings: {
-    //         slidesToShow: 3,
-    //         slidesToScroll: 3,
-    //         initialSlide: 2,
-    //         dots: true,
-    //       },
-    //     },
-    //     {
-    //       breakpoint: 980,
-    //       settings: {
-    //         slidesToShow: 1,
-    //       },
-    //     },
-    //   ],
-    // });
-    // end reviews
+    // end
 
     // start functions
     function faAngleUp() {
@@ -77,18 +39,21 @@
       $('.header__inner').addClass('header__inner_hide');
     }
     // end functions
+
     $('.btns__order-rework').on('click', function () {
       $('select.wpcf7-form-control option[value="Доработка сайта"]').prop('selected', true);
     });
     $('.btns__order-site').on('click', function () {
       $('select.wpcf7-form-control option[value="Создание сайта-визитки"]').prop('selected', true);
     });
+
     new WOW().init();
     // start technology
     $('.technology-item__progress span').each(function () {
       $(this).css({ width: `${$(this).attr('data-level')}%` });
     });
     // end technology
+
     // start menu
     $('.header__nav-mob').on('click', function () {
       $(this).find('div').toggleClass('nav-mob_active');
@@ -106,26 +71,21 @@
     });
     // end
 
-    // start add seo
-    // $('#menu-verhnee-menyu li:first-child a').prepend('<!--noindex-->');
-    // $('#menu-verhnee-menyu li:first-child a').append('<!--/noindex-->');
-    // end add seo
-
     // start подгрузка отзывов
-    var page = 1;
-    var loading = false;
-    var originalButtonText = $('.reviews-more-btn a').text();
+    let page = 1;
+    let loading = false;
+    let originalButtonText = $('.reviews-more-btn a').text();
 
     $('.reviews-more-btn a').on('click', function (e) {
       e.preventDefault();
       if (!loading) {
         loading = true;
         page++;
-        var data = {
+        let data = {
           action: 'load_more_reviews',
           page: page,
         };
-        var url = $('.reviews-more-btn').data('url');
+        let url = $('.reviews-more-btn').data('url');
         $('.reviews-more-btn a').text('Загрузка...');
         $.post(url, data, function (response) {
           if (response !== 'end') {
@@ -180,7 +140,7 @@
         }
       });
       visibleAnswers.forEach(function (element) {
-        var answerPriceText = element.children('.answer-wrapper').find('.answer-price').text();
+        let answerPriceText = element.children('.answer-wrapper').find('.answer-price').text();
         answerPricesArray.push(answerPriceText);
       });
 
@@ -188,9 +148,9 @@
     }
 
     function calc(arr) {
-      var sum = 0;
+      let sum = 0;
       arr.forEach(function (text) {
-        var number = parseFloat(text); // Используйте parseInt(), если числа целочисленные
+        let number = parseFloat(text);
         if (!isNaN(number)) {
           sum += number;
         }
@@ -202,11 +162,15 @@
       const result = dataCollection();
       if (result > 0) {
         const resultElement = $('.calculator-order-result');
-        resultElement.html('Примерная стоимость вашего будущего сайта по указанным критериям составляет:  <span class="calculator-order-result__price">' + result + '₽</span>');
+        resultElement.html(
+          'Примерная стоимость по указанным критериям составляет:  <span class="calculator-order-result__price">' +
+            result +
+            '₽</span><br>Чтобы узнать окончательную стоимость <a href="/contacts" style="text-decoration: underline;">обратитесь ко мне</a>'
+        );
         resultElement.show();
       } else {
         const resultElement = $('.calculator-order-result');
-        resultElement.text('Заполните, пожалуйста, все пункты опроса');
+        resultElement.text('Заполните, пожалуйста, необходимые пункты опроса');
         resultElement.show();
       }
     });

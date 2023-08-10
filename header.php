@@ -9,14 +9,16 @@
 	<?php wp_head(); ?>
 </head>
 <!-- Google tag (gtag.js) -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-WC70CMG6JW"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WC70CMG6JW"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
 
-		gtag('config', 'G-WC70CMG6JW');
-	</script> -->
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-WC70CMG6JW');
+</script>
 
 <body>
 	<header class="header">

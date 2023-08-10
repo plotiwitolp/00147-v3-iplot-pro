@@ -43,13 +43,10 @@
 						</a>
 					</h2>
 				</div>
-				<!-- <div class="portfolio-slider"> -->
 				<div class="portfolio-gallery">
 					<?php
 					$args = array(
 						'post_type' => 'portfolio',
-						// 						'order' => 'ASC',
-						// 						'orderby' => 'date',
 						'posts_per_page' => 4
 					);
 					$query = new WP_Query($args);
@@ -71,11 +68,6 @@
 											</div>
 										</div>
 									<?php endif; ?>
-
-									<div class="portfolio-gallery-item__desc">
-										<?php // echo get_the_content() 
-										?>
-									</div>
 								</a>
 							</div>
 					<?php
@@ -96,7 +88,6 @@
 	</div>
 </div>
 <!--/noindex-->
-
 
 
 <!-- REVIEWS -->
@@ -187,7 +178,7 @@
 			</div>
 			<div class="reviews-more">
 				<div class="reviews-more-btn" data-page="1" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
-					<a class="btn btn_medium" href="#">показать ещё</a>
+					<a class="btn btn_medium" href="#" rel="nofollow">показать ещё</a>
 				</div>
 			</div>
 		</section>
@@ -311,9 +302,6 @@
 </div>
 
 
-
-
-
 <!-- TECHNOLOGY -->
 <!--noindex-->
 <div class="block-technology">
@@ -325,7 +313,6 @@
 				</h2>
 			</div>
 			<div class="technology">
-
 				<?php
 				$args = [
 					'post_type' => 'technology',
@@ -353,7 +340,7 @@
 								<div class="technology-item-notice-line-wrapper">
 									<span data-level="<?php echo $level_of_technology_proficiency ?>" class="technology-item-notice-line html wow animate__animated animate__fadeInLeft animate__slow"></span>
 								</div>
-								<span class="technology-item-notice">Субъективная оценка владения технологией: <?php echo $level_of_technology_proficiency ?>%</span>
+								<span class="technology-item-notice">Владение технологией: <?php echo $level_of_technology_proficiency ?>%</span>
 							</div>
 						</div>
 				<?php
